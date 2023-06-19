@@ -12,6 +12,5 @@ public class testDbConn {
 
 		System.out.println(DbManager.getMysqlQuery("SELECT * FROM databasename"));
 	}
-	
 
 }
