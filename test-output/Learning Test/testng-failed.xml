@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Learning Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Validate Title(failed)">
+    <groups>
+      <run>
+        <include name="high"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testnglearning.TestCase2">
+        <methods>
+          <include name="validateTitle"/>
+        </methods>
+      </class> <!-- testnglearning.TestCase2 -->
+    </classes>
+  </test> <!-- Validate Title(failed) -->
+</suite> <!-- Failed suite [Learning Test] -->

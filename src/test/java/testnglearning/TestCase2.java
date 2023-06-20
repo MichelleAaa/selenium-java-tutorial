@@ -6,7 +6,8 @@ import org.testng.asserts.SoftAssert;
 
 public class TestCase2 {
 	
-	@Test
+//	You can have two groups, if you include them in {}.
+	@Test(groups = {"high", "medium"})
 	public void validateTitle() {
 		String actual_title = "Gmail.com";
 		String expected_title = "Yahoo.com";
@@ -23,6 +24,7 @@ public class TestCase2 {
 		Assert.assertEquals(actual_title, expected_title, "This is an optional third parameter -- if you want to add a failure message --example: Titles are not matching");
 	}
 	
+	@Test(priority = 1, groups = "med")
 	public void testing() {
 		
 		

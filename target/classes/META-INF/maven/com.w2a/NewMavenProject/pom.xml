@@ -54,6 +54,18 @@
     <version>5.3.3</version>
 </dependency>
 
+<dependency>
+    <groupId>org.uncommons</groupId>
+    <artifactId>reportng</artifactId>
+    <version>1.1.4</version>
+</dependency>
+
+<dependency>
+    <groupId>com.google.inject</groupId>
+    <artifactId>guice</artifactId>
+    <version>4.2.3</version>
+</dependency>
+
 
   </dependencies>
 </project>
