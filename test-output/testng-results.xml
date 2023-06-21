@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="7" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-20T21:03:46Z" name="Learning Test" finished-at="2023-06-20T21:03:46Z" duration-ms="134">
+  <suite started-at="2023-06-21T21:51:28Z" name="Default suite" finished-at="2023-06-21T21:51:29Z" duration-ms="581">
     <groups>
-      <group name="high">
-        <method signature="TestCase1.doUserReg()[pri:1, instance:testnglearning.TestCase1@1a245833]" name="doUserReg" class="testnglearning.TestCase1"/>
-        <method signature="TestCase2.validateTitle()[pri:0, instance:testnglearning.TestCase2@55de24cc]" name="validateTitle" class="testnglearning.TestCase2"/>
-      </group> <!-- high -->
-      <group name="medium">
-        <method signature="TestCase2.validateTitle()[pri:0, instance:testnglearning.TestCase2@55de24cc]" name="validateTitle" class="testnglearning.TestCase2"/>
-      </group> <!-- medium -->
     </groups>
-    <test started-at="2023-06-20T21:03:46Z" name="Login Test" finished-at="2023-06-20T21:03:46Z" duration-ms="34">
-      <class name="testnglearning.TestCase1">
-        <test-method signature="doUserReg()[pri:1, instance:testnglearning.TestCase1@1a245833]" started-at="2023-06-20T21:03:46Z" name="doUserReg" finished-at="2023-06-20T21:03:46Z" duration-ms="11" status="PASS">
+    <test started-at="2023-06-21T21:51:28Z" name="Default test" finished-at="2023-06-21T21:51:29Z" duration-ms="581">
+      <class name="extentreports.TestCase1">
+        <test-method is-config="true" signature="setReport()[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="setReport" finished-at="2023-06-21T21:51:28Z" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doUserReg -->
-      </class> <!-- testnglearning.TestCase1 -->
-    </test> <!-- Login Test -->
-    <test started-at="2023-06-20T21:03:46Z" name="Validate Title" finished-at="2023-06-20T21:03:46Z" duration-ms="5">
-      <class name="testnglearning.TestCase2">
-        <test-method signature="validateTitle()[pri:0, instance:testnglearning.TestCase2@55de24cc]" started-at="2023-06-20T21:03:46Z" name="validateTitle" finished-at="2023-06-20T21:03:46Z" duration-ms="2" status="FAIL">
+        </test-method> <!-- setReport -->
+        <test-method signature="doLogin()[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="doLogin" finished-at="2023-06-21T21:51:28Z" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="tearDown" finished-at="2023-06-21T21:51:28Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=doLogin status=SUCCESS method=TestCase1.doLogin()[pri:0, instance:extentreports.TestCase1@338fc1d8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="doUserReg()[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="doUserReg" finished-at="2023-06-21T21:51:28Z" duration-ms="3" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[This is an optional third parameter -- if you want to add a failure message --example: Titles are not matching expected [Yahoo.com] but found [Gmail.com]]]>
+              <![CDATA[Failing user reg test]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: This is an optional third parameter -- if you want to add a failure message --example: Titles are not matching expected [Yahoo.com] but found [Gmail.com]
+              <![CDATA[java.lang.AssertionError: Failing user reg test
 at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at testnglearning.TestCase2.validateTitle(TestCase2.java:24)
+at extentreports.TestCase1.doUserReg(TestCase1.java:77)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -63,10 +63,71 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- doUserReg -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="tearDown" finished-at="2023-06-21T21:51:28Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=doUserReg status=FAILURE method=TestCase1.doUserReg()[pri:0, instance:extentreports.TestCase1@338fc1d8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="validateTitle()[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="validateTitle" finished-at="2023-06-21T21:51:28Z" duration-ms="1" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test case.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test case.
+at extentreports.TestCase1.validateTitle(TestCase1.java:84)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- validateTitle -->
-      </class> <!-- testnglearning.TestCase2 -->
-    </test> <!-- Validate Title -->
-    <test started-at="2023-06-20T21:03:46Z" name="Dependency Test" finished-at="2023-06-20T21:03:46Z" duration-ms="0">
-    </test> <!-- Dependency Test -->
-  </suite> <!-- Learning Test -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="tearDown" finished-at="2023-06-21T21:51:28Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateTitle status=SKIP method=TestCase1.validateTitle()[pri:0, instance:extentreports.TestCase1@338fc1d8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:extentreports.TestCase1@338fc1d8]" started-at="2023-06-21T21:51:28Z" name="endReport" finished-at="2023-06-21T21:51:29Z" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- extentreports.TestCase1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

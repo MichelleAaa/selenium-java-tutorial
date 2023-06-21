@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Validate Title</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 20 17:03:46 EDT 2023</td>
+<td>Started on:</td><td>Wed Jun 21 18:05:35 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (5 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (10 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>high </td>
 </tr><tr>
@@ -75,11 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testnglearning.TestCase2.validateTitle()'><b>validateTitle</b><br>Test class: testnglearning.TestCase2</td>
+<td title='testnglearning.TestCase2.validateTitle()'><b>validateTitle</b><br>Test class: testnglearning.TestCase2<br/>
+<a href="#Output-920446957" onClick='toggleBox("Output-920446957", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-920446957" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-920446957">
+Screenshot<br/>
+Screenshot<br/>
+</div>
+</td>
 <td><div><pre>java.lang.AssertionError: This is an optional third parameter -- if you want to add a failure message --example: Titles are not matching expected [Yahoo.com] but found [Gmail.com]
 	at testnglearning.TestCase2.validateTitle(TestCase2.java:24)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1731656333", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1731656333'><pre>java.lang.AssertionError: This is an optional third parameter -- if you want to add a failure message --example: Titles are not matching expected [Yahoo.com] but found [Gmail.com]
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace920446957", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace920446957'><pre>java.lang.AssertionError: This is an optional third parameter -- if you want to add a failure message --example: Titles are not matching expected [Yahoo.com] but found [Gmail.com]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -111,7 +119,51 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>testnglearning.TestCase2@55de24cc</td></tr>
+<td>testnglearning.TestCase2@2dca0d64</td></tr>
+<tr>
+<td title='testnglearning.TestCase2.validateTitle()'><b>validateTitle</b><br>Test class: testnglearning.TestCase2</td>
+<td><div><pre>java.lang.Error: Unresolved compilation problems: 
+	ScreenshotUtil cannot be resolved
+	ScreenshotUtil cannot be resolved to a variable
+	ScreenshotUtil cannot be resolved to a variable
+	ScreenshotUtil cannot be resolved to a variable
+	ScreenshotUtil cannot be resolved to a variable
+
+	at extentlisteners.ExtentListeners.onTestFailure(ExtentListeners.java:61)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace54176060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace54176060'><pre>java.lang.Error: Unresolved compilation problems: 
+	ScreenshotUtil cannot be resolved
+	ScreenshotUtil cannot be resolved to a variable
+	ScreenshotUtil cannot be resolved to a variable
+	ScreenshotUtil cannot be resolved to a variable
+	ScreenshotUtil cannot be resolved to a variable
+
+	at extentlisteners.ExtentListeners.onTestFailure(ExtentListeners.java:61)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:67)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1389)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:636)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testnglearning.TestCase2@2dca0d64</td></tr>
 </table><p>
 </body>
 </html>
