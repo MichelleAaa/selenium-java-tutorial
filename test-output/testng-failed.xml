@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="extentreports.TestCase1">
+      <class name="testnglearning.TestParamWithExcel">
         <methods>
-          <include name="endReport"/>
-          <include name="doUserReg"/>
-          <include name="setReport"/>
+          <include name="setUp"/>
+          <include name="doLogin"/>
           <include name="tearDown"/>
-          <include name="validateTitle"/>
         </methods>
-      </class> <!-- extentreports.TestCase1 -->
+      </class> <!-- testnglearning.TestParamWithExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
