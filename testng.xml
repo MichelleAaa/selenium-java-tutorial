@@ -9,15 +9,24 @@
 	</groups>
 	<listeners>
 		<listener class-name="testnglearning.CustomListeners" />
+		<!--
 		<listener class-name="org.uncommons.report.reportng.HTMLReporter" />
+		-->
 	</listeners>
 	
   <test name="Login Test" >
     <classes>
-       <class name="testnglearning.TestCase1" />
+       <class name="DataDrivenProject.TestCases_LoginTest" />
+    </classes>
+  </test>
+  
+  <test name="SecondTest" >
+    <classes>
+       <class name="DataDrivenProject.TestCases_SecondTest" />
     </classes>
   </test>
  
+ <!-- 
   <test name="Validate Title">
     <classes>
       <class name="testnglearning.TestCase2"/>
@@ -29,5 +38,6 @@
       <class name="testnglearning.TestCase3"/>
     </classes>
   </test>
+  -->
   
 </suite>
