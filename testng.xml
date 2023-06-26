@@ -14,19 +14,20 @@
 		-->
 	</listeners>
 	
-  <test name="Login Test" >
+  <test name="Bank Manager Login Test" >
     <classes>
-       <class name="DataDrivenProject.TestCases_LoginTest" />
+       <class name="DataDrivenProject.TestCases_BankManagerLoginTest" />
     </classes>
   </test>
   
-  <test name="SecondTest" >
+ 
+  <test name="Add Customer Test" >
     <classes>
-       <class name="DataDrivenProject.TestCases_SecondTest" />
+       <class name="DataDrivenProject.TestCases_AddCustomerTest" />
     </classes>
   </test>
  
- <!-- 
+  <!-- 
   <test name="Validate Title">
     <classes>
       <class name="testnglearning.TestCase2"/>

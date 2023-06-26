@@ -10,12 +10,17 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.openqa.selenium.support.ui.Select;
 
+import com.aventstack.extentreports.Status;
+
+import extentlisteners.ExtentListeners;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.DbManager;
 import utilities.ExcelReader;
@@ -29,6 +34,7 @@ public class Base_BaseTest {
 	public static FileInputStream fis;
 	public static ExcelReader excel = new ExcelReader(".\\src\\test\\resources\\excel\\users-for-way2automation-test.xlsx");
 	public static WebDriverWait wait;
+	static WebElement dropdown;
 	
 	
 //	This is our base class which we will extend in other classes. We include the startup, end, and also functions like click and type that we can use in our test cases in other files.
@@ -46,9 +52,11 @@ public class Base_BaseTest {
 			driver.findElement(By.cssSelector(OR.getProperty(key)));
 		}
 		log.info("Finding an Element: " + key);
+		ExtentListeners.test.log(Status.INFO, "Finding an Element: " + key);
 		return true;
 		} catch(Throwable t) {
-			log.info("Error while finding an Element: " + key + "Error log is: " + t.getMessage());
+			log.error("Error while finding an Element: " + key + "Error log is: " + t.getMessage());
+			ExtentListeners.test.log(Status.WARNING, "Error while finding an Element: " + key);
 			return false;
 		}
 	}
@@ -64,6 +72,7 @@ public static void click(String key) {
 			driver.findElement(By.cssSelector(OR.getProperty(key))).click();
 		}
 		log.info("Clicking on an Element: " + key);
+		ExtentListeners.test.log(Status.INFO, "Clicking on an Element: " + key);
 	}
 	
 public static void type(String key, String value) {
@@ -77,7 +86,29 @@ public static void type(String key, String value) {
 			driver.findElement(By.cssSelector(OR.getProperty(key))).sendKeys(value);
 		}
 		log.info("Typing in an Element: " + key + "entered the value as: " + value);
+		ExtentListeners.test.log(Status.INFO, "Typing in an Element: " + key + "entered the value as: " + value);
 	}
+
+public static void select(String key,String value) {
+
+	
+	if (key.endsWith("_XPATH")) {
+
+		dropdown = driver.findElement(By.xpath(OR.getProperty(key)));
+	} else if (key.endsWith("_ID")) {
+
+		dropdown = driver.findElement(By.id(OR.getProperty(key)));
+	} else if (key.endsWith("_CSS")) {
+
+		dropdown =driver.findElement(By.cssSelector(OR.getProperty(key)));
+	}
+	
+	Select select = new Select(dropdown);
+	select.selectByVisibleText(value);
+
+	log.info("Selecting the value from dropdown " + key+"  selected value as : "+value);
+	ExtentListeners.test.log(Status.INFO, "Selecting the value from dropdown " + key+"  selected value as : "+value);
+}
 	
 	
 	
